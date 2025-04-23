@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import PostsList from "../components/PostsList";
 
 const Posts = () => {
 
@@ -21,15 +21,7 @@ const Posts = () => {
 
     return <div>
         <h1>Lista Posts</h1>
-        <div className="container">
-            {postsData.map((element) => (
-                <div className="post-card" key={element.id}>
-                    <h2>Titolo:{element.title}</h2>
-                    <Link to={`${element.id}`}>{element.body}</Link>
-                    <h4>[ userId:{element.userId} ]</h4>
-                </div>
-            ))}
-        </div>
+        <PostsList postsData={postsData} />
     </div>
 }
 
