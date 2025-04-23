@@ -5,7 +5,7 @@ import PostsList from "../components/PostsList";
 const Posts = () => {
 
     const [postsData, setPostsData] = useState([])
-    const endpoint = "https://jsonplaceholder.typicode.com/posts";
+    const endpoint = "https://jsonplaceholder.typicode.com/posts?_limit=10";
 
     function getPosts() {
         axios.get(endpoint)
