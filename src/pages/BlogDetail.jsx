@@ -40,8 +40,8 @@ const BlogDetail = () => {
             <h2>Post numero: {post.id}</h2>
             <p>{post.body}</p>
             <button onClick={() => {
-                navigate(-1);
-            }}>Torna alla pagina precedente</button>
+                navigate("/posts");
+            }}>Torna alla lista dei post</button>
             <br />
             <button onClick={() => {
                 navigate(`/posts/${parseInt(id) - 1}`)
