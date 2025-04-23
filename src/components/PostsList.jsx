@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { GlobalContext } from "../context/GlobalContext";
 
-const PostsList = ({ postsData }) => {
+const PostsList = () => {
+    const { postsData } = useContext(GlobalContext)
     return (
         <>
             <div className="container">
